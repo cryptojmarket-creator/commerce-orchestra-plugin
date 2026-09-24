@@ -39,7 +39,9 @@ Commerce Orchestra is not affiliated with or endorsed by the listed commerce ser
 
 ## Distribution model
 
-The plugin may be visible and installable, while access to the private MCP runtime is controlled by an external Commerce Orchestra account. The runtime returns only entitlement state, remaining allowance, and renewal timing; it does not expose billing credentials to Codex.
+The trial allows three cart preparations each week. A verified KRW 2,000 payment activates an individual plan for 30 days. Codex can request an external checkout link, but the user enters payment details and approves the charge in the Toss Payments window.
+
+The plugin may be visible and installable, while access to the private MCP runtime is controlled by an external Commerce Orchestra account. The runtime returns only entitlement state, remaining allowance, and renewal timing; it does not expose card details or the payment provider's secret key to Codex.
 
 ## Repository layout
 

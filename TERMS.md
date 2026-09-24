@@ -4,7 +4,7 @@ Commerce Orchestra is an early pilot that helps prepare actions on third-party c
 
 The user must review the selected item, quantity, options, merchant, delivery details, and total before approving payment. The pilot does not authorize unattended payment.
 
-Access to the private runtime may require an active Commerce Orchestra account and may be subject to usage limits. Account management and subscription purchase occur outside the Codex plugin.
+The trial provides three cart preparations per week. A KRW 2,000 payment activates 30 days of individual access. This pilot is a fixed-duration pass and does not renew automatically. Account management and payment approval occur outside the Codex plugin.
 
 This plugin is not affiliated with or endorsed by Baemin, Coupang, AliExpress, Temu, Amazon, or other connected services. Use is also subject to each third-party service's terms.
 
