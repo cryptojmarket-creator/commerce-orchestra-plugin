@@ -1,0 +1,32 @@
+{
+  "name": "commerce-orchestra",
+  "version": "0.1.0",
+  "description": "Prepare shopping and delivery requests through existing commerce services, with the user retaining final payment control.",
+  "author": {
+    "name": "cryptojmarket-creator",
+    "url": "https://github.com/cryptojmarket-creator"
+  },
+  "homepage": "https://github.com/cryptojmarket-creator/commerce-orchestra-plugin",
+  "repository": "https://github.com/cryptojmarket-creator/commerce-orchestra-plugin",
+  "keywords": ["commerce", "shopping", "delivery", "orchestration", "codex"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Commerce Orchestra",
+    "shortDescription": "Prepare purchases across existing commerce services.",
+    "longDescription": "Connect Codex to a provisioned Commerce Orchestra MCP runtime, prepare shopping or delivery tasks, verify the proposed cart, and hand final payment approval back to the user.",
+    "developerName": "Commerce Orchestra",
+    "category": "Productivity",
+    "capabilities": ["Interactive"],
+    "websiteURL": "https://github.com/cryptojmarket-creator/commerce-orchestra-plugin",
+    "privacyPolicyURL": "https://github.com/cryptojmarket-creator/commerce-orchestra-plugin/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/cryptojmarket-creator/commerce-orchestra-plugin/blob/main/TERMS.md",
+    "defaultPrompt": [
+      "전에 주문한 상품을 다시 살 수 있게 준비해줘.",
+      "배달 음식 주문을 준비하고 결제 전에 보여줘.",
+      "연결된 쇼핑 플랫폼과 사용 가능 횟수를 알려줘."
+    ],
+    "brandColor": "#6D5DFC",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  }
+}

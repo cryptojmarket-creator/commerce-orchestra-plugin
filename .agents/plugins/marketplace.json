@@ -1,0 +1,20 @@
+{
+  "name": "commerce-orchestra",
+  "interface": {
+    "displayName": "Commerce Orchestra"
+  },
+  "plugins": [
+    {
+      "name": "commerce-orchestra",
+      "source": {
+        "source": "local",
+        "path": "./plugins/commerce-orchestra"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

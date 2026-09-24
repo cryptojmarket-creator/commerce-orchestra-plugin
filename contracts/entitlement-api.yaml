@@ -1,0 +1,77 @@
+openapi: 3.1.0
+info:
+  title: Commerce Orchestra Entitlement API
+  version: 0.1.0
+  description: Public boundary used by a private MCP runtime to check access and usage allowance.
+paths:
+  /v1/entitlements/check:
+    post:
+      operationId: checkEntitlement
+      summary: Check whether an installation may perform a metered action
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EntitlementRequest'
+      responses:
+        '200':
+          description: Current entitlement state
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EntitlementResponse'
+        '401':
+          description: Missing or invalid account token
+        '429':
+          description: Rate limit reached
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+  schemas:
+    EntitlementRequest:
+      type: object
+      additionalProperties: false
+      required: [installation_id, action, plugin_version]
+      properties:
+        installation_id:
+          type: string
+          minLength: 16
+          maxLength: 128
+          description: Random installation identifier; never a hardware serial number.
+        action:
+          type: string
+          enum: [route, prepare_cart, verify_cart]
+        plugin_version:
+          type: string
+          pattern: '^\\d+\\.\\d+\\.\\d+$'
+    EntitlementResponse:
+      type: object
+      additionalProperties: false
+      required: [active, plan, remaining, reset_at, lease_token, lease_expires_at]
+      properties:
+        active:
+          type: boolean
+        plan:
+          type: string
+          enum: [trial, individual, team]
+        remaining:
+          type: integer
+          minimum: 0
+        reset_at:
+          type: string
+          format: date-time
+        lease_token:
+          type: string
+          description: Short-lived signed capability for one permitted runtime action.
+        lease_expires_at:
+          type: string
+          format: date-time
+        account_url:
+          type: string
+          format: uri
+          description: Optional external account-management page.
