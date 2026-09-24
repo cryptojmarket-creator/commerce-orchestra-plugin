@@ -20,7 +20,7 @@ Use the provisioned Commerce Orchestra MCP tools for purchase preparation. The p
 
 ## Subscription boundary
 
-The trial includes three cart preparations per week. If the runtime reports that the trial quota is exhausted and the user wants access, call `orchestra_subscription_checkout` and present its external checkout URL. The current individual plan costs KRW 2,000 and activates 30 days after verified payment approval. Do not collect or enter card details. The user completes the Toss Payments window directly.
+The plugin may use an existing account and entitlement created outside Codex. If the runtime reports that access is unavailable, explain the returned status and, when supplied, offer the informational `account_url`. Do not display plans, initiate a subscription, create a checkout link, or direct the user to a payment page from the plugin. Never collect or enter card details.
 
 ## Privacy
 

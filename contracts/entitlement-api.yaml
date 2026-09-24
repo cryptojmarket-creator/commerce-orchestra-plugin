@@ -1,31 +1,9 @@
 openapi: 3.1.0
 info:
   title: Commerce Orchestra Entitlement API
-  version: 0.1.0
+  version: 0.2.0
   description: Public boundary used by a private MCP runtime to check access and usage allowance.
 paths:
-  /v1/billing/checkout:
-    post:
-      operationId: createCheckout
-      summary: Create a short-lived external checkout link for a 30-day individual plan
-      security:
-        - bearerAuth: []
-      responses:
-        '200':
-          description: Checkout created
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties: false
-                required: [order_id, amount_krw, product, checkout_url]
-                properties:
-                  order_id: {type: string}
-                  amount_krw: {type: integer, const: 2000}
-                  product: {type: string}
-                  checkout_url: {type: string, format: uri}
-        '401':
-          description: Missing or invalid account token
   /v1/entitlements/check:
     post:
       operationId: checkEntitlement

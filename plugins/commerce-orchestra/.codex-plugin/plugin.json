@@ -1,6 +1,6 @@
 {
   "name": "commerce-orchestra",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Prepare shopping and delivery requests through existing commerce services, with the user retaining final payment control.",
   "author": {
     "name": "cryptojmarket-creator",
@@ -13,7 +13,7 @@
   "interface": {
     "displayName": "Commerce Orchestra",
     "shortDescription": "Prepare purchases across existing commerce services.",
-    "longDescription": "Connect Codex to a provisioned Commerce Orchestra MCP runtime, prepare shopping or delivery tasks, verify the proposed cart, and let the user activate a 30-day plan through a separate Toss Payments checkout.",
+    "longDescription": "Connect Codex to a provisioned Commerce Orchestra MCP runtime, prepare shopping or delivery tasks, verify the proposed cart, and use an existing externally managed account entitlement.",
     "developerName": "Commerce Orchestra",
     "category": "Productivity",
     "capabilities": ["Interactive"],

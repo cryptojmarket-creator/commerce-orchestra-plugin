@@ -37,11 +37,11 @@ The decision engine, Meta Layer implementation, platform adapters, automation lo
 
 Commerce Orchestra is not affiliated with or endorsed by the listed commerce services. Their names and trademarks belong to their respective owners.
 
-## Distribution model
+## Access model
 
-The trial allows three cart preparations each week. A verified KRW 2,000 payment activates an individual plan for 30 days. Codex can request an external checkout link, but the user enters payment details and approves the charge in the Toss Payments window.
+The public plugin checks access for an existing Commerce Orchestra account. Account creation, plan information, and any payment take place independently outside Codex. The plugin does not sell a subscription, show an upgrade flow, or create a checkout link.
 
-The plugin may be visible and installable, while access to the private MCP runtime is controlled by an external Commerce Orchestra account. The runtime returns only entitlement state, remaining allowance, and renewal timing; it does not expose card details or the payment provider's secret key to Codex.
+The plugin may be visible and installable, while access to the private MCP runtime is controlled by that external account. The runtime returns only entitlement state, remaining allowance, and renewal timing; it does not expose card details or a payment provider's secret key to Codex.
 
 ## Repository layout
 
